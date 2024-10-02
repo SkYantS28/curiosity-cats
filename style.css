@@ -1,0 +1,198 @@
+*{
+    font-family: arial, sans-serif;
+    margin: 0 auto; /*As margens são usadas para criar espaço ao redor dos elementos, fora de quaisquer bordas definidas. (fora)*/
+    padding: 0; /*padding = preenchimento. (dentro)
+    Cria espaço ao redor do conteúdo de um elemento, dentro de quaisquer bordas definidas.*/
+    box-sizing: border-box; /*o tamanho agora levará em conta até a borda.
+    ou seja, o width será a soma do conteúdo com a borda e o padding*/
+}
+
+body{
+    background-color: rgb(236, 216, 255);
+}
+
+header{
+    background-color: rgb(200, 157, 241);
+    padding: 30px;
+    text-align: center;
+    color: rgb(142, 70, 209);
+    text-shadow: 2px 2px rgb(236, 216, 255);
+}
+
+h2 {
+    text-align: center;
+    color: #a72ac3;
+    font-weight: bold;
+    margin-top: 40px;
+    text-shadow: 2px 2px white;
+}
+
+#text, #carregando {
+    text-align: center;
+    color: #a72ac3;
+    font-weight: bold;
+}
+
+#container_curiosidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#carregandoCuriosidades {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.hidden {
+    display: none; /*carregandoCuriosidades.classList.remove('hidden');*/
+}
+
+#filtroInput {
+    display: block;
+    width: 60%;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(142, 70, 209);
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: rgb(243, 233, 251);
+    color: rgb(142, 70, 209);
+}
+#filtroInput:hover{
+    background-color: rgb(219, 183, 253);
+}
+
+#filtrarCuriosidades, .favoritar, .desfavoritar {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(142, 70, 209);
+    color: white;
+    transition: background-color 0.3s;
+}
+#filtrarCuriosidades:hover, .favoritar:hover, .desfavoritar:hover {
+    background-color: rgb(200, 157, 241);
+    transform: scale(1.05);
+}
+
+#salvarFavorito {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(200, 157, 241);
+    color: white;
+    transition: background-color 0.3s;
+}
+#salvarFavorito:hover {
+    background-color: rgb(142, 70, 209);
+}
+
+#container_favoritos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.curiosidade-favorita {
+    background-color: rgb(243, 233, 251);
+    border: 1px solid rgb(200, 157, 241); 
+    border-radius: 5px;
+    padding: 15px; 
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+.curiosidade-favorita:hover {
+    transform: scale(1.05);
+}
+
+.curiosidade-container { 
+    background-color: rgb(243, 233, 251);
+    border: 1px solid rgb(142, 70, 209);
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s;
+}
+.curiosidade-container:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 360px) {
+    #filtroInput {
+        width: 90%; /* Aumenta a largura do input em telas pequenas */
+    }
+
+    .curiosidade-container, .curiosidade-favorita {
+        width: 90%; /* Ajusta a largura das cartas */
+        margin: 5px; /* Reduz a margem para se ajustar melhor */
+    }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+    #filtroInput {
+        width: 80%; /* Ajusta a largura do input para telas médias */
+    }
+
+    .curiosidade-container, .curiosidade-favorita {
+        width: 80%; /* Ajusta a largura das cartas */
+        margin: 10px; /* Mantém a margem em um tamanho razoável */
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    #filtroInput {
+        width: 70%; /* Ajusta a largura do input para telas grandes */
+    }
+
+    .curiosidade-container, .curiosidade-favorita {
+        width: 45%; /* Ajusta a largura para duas cartas por linha */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #filtroInput {
+        width: 60%; /* Ajusta a largura do input para tablets em retrato */
+    }
+
+    .curiosidade-container, .curiosidade-favorita {
+        width: 30%; /* Ajusta a largura para três cartas por linha */
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    #filtroInput {
+        width: 50%; /* Ajusta a largura do input para tablets em paisagem */
+    }
+
+    .curiosidade-container, .curiosidade-favorita {
+        width: 25%; /* Ajusta a largura para quatro cartas por linha */
+    }
+}
+
+@media (min-width: 1281px) {
+    #filtroInput {
+        width: 40%; /* Ajusta a largura do input para desktops */
+    }
+
+    .curiosidade-container, .curiosidade-favorita {
+        width: 20%; /* Ajusta a largura para cinco cartas por linha */
+    }
+}

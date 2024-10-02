@@ -1,0 +1,46 @@
+Requisição e Exibição de Dados(2,0 pontos) 😀 = manipular api
+
+Utilize a Fetch API para consumir dados de uma API pública. = fetch()
+
+Exiba uma lista com pelo menos 10 itens recebidos da API (por exemplo, imagens de raças de cães). 
+
+Filtragem e Manipulação de Dados (JavaScript Intermediário)😀2,0 pontos = manipular e pegar o que vc quer
+
+Implemente uma funcionalidade que permita ao usuário filtrar a lista exibida com base em um critério. 
+
+Utilize funções de alta ordem como filter e map para manipular e exibir os dados filtrados.
+
+Armazenamento e Recuperação Local (JavaScript Avançado)😀2,0 pontos 
+
+Adicione uma funcionalidade que permita ao usuário salvar seus itens favoritos (por exemplo, salvar uma raça de cão favorita em um array local). = localStorage
+
+Utilize o localStorage do navegador para armazenar os favoritos e possibilitar que, ao recarregar a página, os itens favoritos continuem visíveis.
+
+Manipulação do DOM (Interação Dinâmica)😀2,0 pontos = manipulaçõa da janela css
+
+Implemente uma interação dinâmica ao clicar em um item da lista, exibindo um detalhe adicional sobre o item (por exemplo, ao clicar em uma raça de cão, exibir uma descrição ou outra informação relevante).
+
+A interação deve atualizar o DOM sem recarregar a página (utilizando eventos JavaScript).
+
+    OBS 1 - Código devidamente hospedado no github
+
+    OBS 2 - Colocar o site no github pages ou similares
+
+    OBS 3 - Apresentação obrigatória na próxima aula 02/10, caso o aluno não venha, avaliação será zerada.
+
+    OBS 4 - Não pode utilizar as API's: pokemon, weather api, gatos e cachorros.
+
+    OBS5 - carregar mais 10 e apagar os 10 antigos
+
+Nota maxima: Scroll infinito.
+
+API: https://alexwohlbruck.github.io/cat-facts/?ref=public_apis (curiosidade sobre gatinhos)
+
+criar um alimento para colocar um click todas imagens vai ser criada nesse click
+primeiro adicionei segundo removi e muda a cor
+
+const btn = document.getelementbyid = 'btn'; fora em vez de dentro
+function clique (){
+    
+
+}
